@@ -1,0 +1,11 @@
+--- D:\A_kaiwu\week1\NBEnvelopeQ\QNet.py
++++ D:\A_kaiwu\week1\NBEnvelopeQ\QNet.py
+@@ -24,7 +24,7 @@
+         :param preference:      B x 2: two dimension array means w
+         :return:                Q values : shape = preference_num x action_space
+         '''
+-        x = self.feature(obs)  #                        ???
++        x = self.feature(obs)
+         x = torch.cat([x, preference], dim=1) ### 128 --- > 130 ###
+         policy = self.actor(x)
+         value = self.critic(x)
